@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gcp-devops-gke
+  name: gcp-devops-dev-gke
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: gcp
@@ -13,7 +13,7 @@ spec:
         app: gcp
     spec:
       containers:
-      - name: gcp-devops-gke
+      - name: gcp-devops-dev-gke
         image: gcr.io/coherent-glow-420407/gcpdevops-dev:latest
         ports:
         - containerPort: 5000
@@ -24,7 +24,7 @@ spec:
 apiVersion: "v1"
 kind: Service
 metadata:
-  name: "gcp-devops-gke-service"
+  name: "gcp-devops-dev-gke-service"
   namespace: "gcp-devops-dev"
   labels:
    app.kubernetes.io/managed-by: "gcp-cloud-build-deploy"
