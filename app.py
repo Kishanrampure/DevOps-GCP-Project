@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_geek():
-    return '<div style=\"text-align: center;\"><h1>Hello from KishanRampure!</h1><p>Welcome to GCP DevOps Dev Env.</p><p></p></div>'
+    return '<div style=\"text-align: center;\"><h1>Hello from KishanRampure!</h1><p>Welcome to Dev Env.</p><p></p></div>'
 
 
 if __name__ == "__main__":
